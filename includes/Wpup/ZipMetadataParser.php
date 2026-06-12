@@ -229,7 +229,7 @@ class Wpup_ZipMetadataParser {
 	 */
 	protected function setSlug(){
 		$mainFile = $this->packageInfo['type'] === 'plugin' ? $this->packageInfo['pluginFile'] : $this->packageInfo['stylesheet'];
-		$this->metadata['slug'] = basename(dirname(strtolower($mainFile)));
+		$this->metadata['slug'] = basename(dirname($mainFile));
 		//Idea: Warn the user if the package doesn't match the expected "/slug/other-files" layout.
 	}
 
